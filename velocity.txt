@@ -1,0 +1,36 @@
+package program.pkg55;
+public class Program55 {
+    public static void main(String[] args) {
+         Infacea.Ifacb a1;
+        Checking t1= new Checking();
+       a1=t1;
+        a1.getvelocity();
+        a1.getacceleration();
+    } 
+}
+interface Infacea{ 
+    interface Ifacb{
+                 void getacceleration();
+                 void getvelocity();
+    } 
+}
+ class Checking implements Infacea.Ifacb{ 
+      int r=1000;
+      @Override
+    public void getvelocity()
+    {
+        double v=Math.sqrt(3.98*100000/r);
+         System.out.println("acceleration is "+ v);
+       
+    }
+      @Override
+    public void getacceleration(){
+         System.out.println("velocity is "+(3.98*100000/(r*r)));
+        
+    }
+}
+Output:
+run:
+acceleration is 19.949937343260004
+velocity is 0.398
+BUILD SUCCESSFUL (total time: 0 seconds)
